@@ -4,11 +4,13 @@ body {
 .main {
     text-align: center;
 }
-.box { 
-    border: solid #28078B 1px;
+.box {
+    width: 200px;
+    border-radius: 10px; 
+    border: solid #28078B 5px;
     display: inline-block;
-    margin: 1em;
-    padding: 1em;
+    margin: 1px;
+    padding: 5px;
     background-color: #2B4F81;
     box-shadow: 10px 10px 5px #003F87
 }

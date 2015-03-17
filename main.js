@@ -39,8 +39,8 @@ function checkMatches( boxNo, $box ) {
         if ( imageUrlForBox[ clicked ] === imageUrlForBox[ boxNo ] ) {
             $oldBox.addClass( 'revealed' );
             $box.addClass( 'revealed' );
-            $( '.box' ).addClass( 'revealed' ); // XXX testing, please remove later
-            show( $( '.box' ) ); // XXX testing, please remove later
+            $( '.box' ).addClass( 'revealed' ); // XXX Testing please remove later
+            show( $( '.box' ) ); // XXX Testing please remove later
             if ( $( '.box' ).not( '.revealed' ).length === 0 ) {
                 $( '.main' ).addClass( 'complete' );
                 $( 'body' ).append( $( '<audio>' ).attr( 'autoplay', true ).append( $( '<source>' ).attr( { type: 'audio/wav', src: 'http://www.maddmansrealm.com/drwho/tardis/sounds/sounds/Takeoff1.wav' } ) ) );
