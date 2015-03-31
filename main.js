@@ -1,21 +1,5 @@
-var images, images2, paras, i, clicked, imageUrlForBox;
+var clicked, imageUrlForBox;
 clicked = null;
-images = [ 'http://troi.org/arthur/1.jpg', 'http://troi.org/arthur/2.jpg', 'http://troi.org/arthur/3.jpg', 'http://troi.org/arthur/4.jpg', 'http://troi.org/arthur/5.jpg', 'http://troi.org/arthur/6.jpg', 'http://troi.org/arthur/7.jpg', 'http://troi.org/arthur/8.jpg', 'http://troi.org/arthur/9.jpg', 'http://troi.org/arthur/10.jpg', 'http://troi.org/arthur/11.jpg', 'http://troi.org/arthur/12.jpg', 'http://troi.org/arthur/13.jpg' ];
-images2 = images.concat( images );
-paras = '';
-imageUrlForBox = [];
-for( i = 0; i < images2.length; i++ ) {
-    paras = paras + '<span class=\'box\'></span>';
-}
-$( '.main' ).html( paras );
-$( '.box' ).each( function ( i ) {
-    var imageNum;
-    imageNum = parseInt( Math.random() * images2.length );
-    imageUrlForBox[ i ] = images2[ imageNum ];
-    $( this ).html( '<img src="' + images2[ imageNum ] + '">' );
-    $( this ).data( 'boxNo', i );
-    images2.splice( imageNum, 1 );
-} );
 function show( $selection ) {
     $selection.addClass( 'active' );
 }
@@ -54,9 +38,37 @@ function checkMatches( boxNo, $box ) {
         clicked = null;
     }
 }
-$( '.box' ).on( 'click', function () {
-    var boxNo, $box;
-    $box = $( this );
-    boxNo = $box.data( 'boxNo' );
-    checkMatches( boxNo, $box );
-} );
+function createBoxes( images ) {
+    var images2, paras, i;
+    images2 = images.concat( images );
+    paras = '';
+    imageUrlForBox = [];
+    for( i = 0; i < images2.length; i++ ) {
+        paras = paras + '<span class=\'box\'></span>';
+    }
+    $( '.main' ).html( paras );
+    $( '.box' ).each( function ( i ) {
+        var imageNum;
+        imageNum = parseInt( Math.random() * images2.length );
+        imageUrlForBox[ i ] = images2[ imageNum ];
+        $( this ).html( '<img src="' + images2[ imageNum ] + '">' );
+        $( this ).data( 'boxNo', i );
+        images2.splice( imageNum, 1 );
+    } );
+    $( '.box' ).on( 'click', function () {
+        var boxNo, $box;
+        $box = $( this );
+        boxNo = $box.data( 'boxNo' );
+        checkMatches( boxNo, $box );
+    } );
+}
+function showDoctors() {
+    createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ].map( function ( n ) {
+        return 'images/doctors/' + n + '.jpg';
+    } ) );
+}
+function showMasters() {
+    createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ].map( function ( n ) {
+        return 'images/masters/' + n + '.jpg';
+    } ) );
+}
