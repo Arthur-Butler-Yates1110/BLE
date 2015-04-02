@@ -6,7 +6,7 @@ function show( $selection ) {
 function hide( $selection ) {
     $selection.removeClass( 'active' );
 }
-function checkMatches( boxNo, $box ) {
+function checkMatches( boxNo, $box, soundUrl ) {
     var $oldBox;
     if ( clicked === null ) {
         // Show this card
@@ -23,11 +23,11 @@ function checkMatches( boxNo, $box ) {
         if ( imageUrlForBox[ clicked ] === imageUrlForBox[ boxNo ] ) {
             $oldBox.addClass( 'revealed' );
             $box.addClass( 'revealed' );
-            $( '.box' ).addClass( 'revealed' ); // XXX Testing please remove later
-            show( $( '.box' ) ); // XXX Testing please remove later
+            $( '.box' ).addClass( 'revealed' ); //XXX testing please rmove later
+            show( $( '.box' ) ); //XXX testing please remove later
             if ( $( '.box' ).not( '.revealed' ).length === 0 ) {
                 $( '.main' ).addClass( 'complete' );
-                $( 'body' ).append( $( '<audio>' ).attr( 'autoplay', true ).append( $( '<source>' ).attr( { type: 'audio/wav', src: 'http://www.maddmansrealm.com/drwho/tardis/sounds/sounds/Takeoff1.wav' } ) ) );
+                $( 'body' ).append( $( '<audio>' ).attr( 'autoplay', true ).append( $( '<source>' ).attr( { type: 'audio/wav', src: soundUrl } ) ) );
             }
         } else {
             setTimeout( function () {
@@ -38,9 +38,9 @@ function checkMatches( boxNo, $box ) {
         clicked = null;
     }
 }
-function createBoxes( images ) {
-    var images2, paras, i;
+function createBoxes( images, soundUrl ) {
     images2 = images.concat( images );
+    var images2, paras, i;
     paras = '';
     imageUrlForBox = [];
     for( i = 0; i < images2.length; i++ ) {
@@ -59,16 +59,21 @@ function createBoxes( images ) {
         var boxNo, $box;
         $box = $( this );
         boxNo = $box.data( 'boxNo' );
-        checkMatches( boxNo, $box );
+        checkMatches( boxNo, $box, soundUrl );
     } );
 }
 function showDoctors() {
     createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ].map( function ( n ) {
         return 'images/doctors/' + n + '.jpg';
-    } ) );
+    } ), 'http://www.maddmansrealm.com/drwho/tardis/sounds/sounds/Takeoff1.wav' );
 }
 function showMasters() {
     createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ].map( function ( n ) {
         return 'images/masters/' + n + '.jpg';
-    } ) );
+    } ), 'http://www.maddmansrealm.com/drwho/tardis/sounds/sounds/Eviltard.wav' );
+}
+function showDaleks() {
+    createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ].map( function ( n ) {
+        return 'images/daleks/' + n + '.jpg';
+    } ), 'http://www.drwho.org/downloads/wav/baddies/dalek-exterminate.wav' );
 }

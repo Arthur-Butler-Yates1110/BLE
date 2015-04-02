@@ -6,16 +6,18 @@ body {
 }
 .box {
     width: 200px;
-    border-radius: 10px; 
+    height: 200px;  
+    border-radius: 20px; 
     border: solid #28078B 5px;
     display: inline-block;
-    margin: 1px;
+    margin: 5px;
     padding: 5px;
     background-color: #2B4F81;
     box-shadow: 10px 10px 5px #003F87
 }
 .box.revealed {
-    border: solid #28078B 5px;
+    border: solid #2B4F81 5px;
+    box-shadow: 10px 10px 5px #2B4F81;
 }
 .box img {
     transform: none;
@@ -61,5 +63,8 @@ body {
     -webkit-animation: mydematerialiseanimation 8s;
     opacity: 0;
 }
-
-
+input {
+    font-size: 300%;
+    color: #2B4F81;
+    background-color: green;
+}
