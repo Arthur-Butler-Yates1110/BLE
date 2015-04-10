@@ -1,25 +1,74 @@
 body {
-    background-color: #2B4F81;
+    background-image: url("images/backgrounds/TV.jpg");
 }
-.main {
+h1 {
     text-align: center;
+    font-size: 400%;
+    color: #2b4f81;
 }
-.box {
+.instructions {
+    text-align: center;
+    font-size: 300%;
+    color: #8b475d;
+}
+.main.daleks {
+    text-align: center;
+    background-image: url("images/backgrounds/ds.jpg");
+}
+.main.doctors {
+    text-align: center;
+    background-image: url("images/backgrounds/ti.png");
+}
+.main.masters {
+    text-align: center;
+    background-image: url("images/backgrounds/mti.jpg");
+}
+.main.companions {
+    text-align: center;
+    background-image: url("images/backgrounds/e.jpg");
+    transform: none;
+    transition: transform 3s;
+}
+.companions .box {
     width: 200px;
     height: 200px;  
     border-radius: 20px; 
-    border: solid #28078B 5px;
+    border: solid blue 5px;
     display: inline-block;
-    margin: 5px;
+    margin: 10px;
     padding: 5px;
-    background-color: #2B4F81;
-    box-shadow: 10px 10px 5px #003F87
+    box-shadow: 10px 10px 5px green;
 }
-.box.revealed {
-    border: solid #2B4F81 5px;
-    box-shadow: 10px 10px 5px #2B4F81;
+.daleks .box {
+    width: 200px;
+    height: 200px;  
+    border-radius: 20px; 
+    border: solid #4c4000 5px;
+    display: inline-block;
+    margin: 10px;
+    padding: 5px;
+    box-shadow: 10px 10px 5px #7f6b00;
 }
-.box img {
+.doctors .box {
+    width: 200px;
+    height: 200px;  
+    border-radius: 20px; 
+    border: solid #2b4f81 5px;
+    display: inline-block;
+    margin: 10px;
+    padding: 5px;
+    box-shadow: 10px 10px 5px #28078b;
+}
+.masters .box {
+    width: 200px;
+    height: 200px;  
+    border-radius: 20px; 
+    border: solid #000000 5px;
+    display: inline-block;
+    margin: 10px;
+    padding: 5px;
+    box-shadow: 10px 10px 5px red;
+}.box img {
     transform: none;
     opacity: 0;
     transition: transform 0.4s, opacity 0.4s;
@@ -58,13 +107,48 @@ body {
     91.6% { opacity: 0.1; }
     100% { opacity: 0; }
 }
-.main.complete {
+.main.doctors.complete {
     animation: mydematerialiseanimation 8s;
     -webkit-animation: mydematerialiseanimation 8s;
     opacity: 0;
 }
-input {
+.main.masters.complete {
+    animation: mydematerialiseanimation 14s;
+    -webkit-animation: mydematerialiseanimation 14s;
+    opacity: 0;
+}
+.main.companions.complete {
+    transform: scale(0,0);
+}
+@keyframes myshiveranimation {
+    0% { transform: none; opacity: 1; }
+    25% { transform: none; opacity: 1; }
+    50% { transform: none; opacity: 1; }
+    75% { transform: none; opacity: 1; }
+    80% { transform: none; opacity: 1; }
+    85% { transform: translate(20px,0px); opacity: 0.75; }
+    90% { transform: none; opacity: 0.5; }
+    95% { transform: translate(-20px,0px); opacity: 0.25; }
+    100% { transform: none; opacity: 0; }
+}
+@-webkit-keyframes myshiveranimation {
+    0% { transform: none; opacity: 1; }
+    25% { transform: none; opacity: 1; }
+    50% { transform: none; opacity: 1; }
+    75% { transform: none; opacity: 1; }
+    80% { transform: none; opacity: 1; }
+    85% { transform: translate(20px,0px); opacity: 0.75; }
+    90% { transform: none; opacity: 0.5; }
+    95% { transform: translate(-20px,0px); opacity: 0.25; }
+    100% { transform: none; opacity: 0; }
+}
+.main.daleks.complete {
+    animation: myshiveranimation 1.5s;
+    -webkit-animation: myshiveranimation 1.5s;
+    opacity: 0;
+}
+input { 
     font-size: 300%;
     color: #2B4F81;
-    background-color: green;
+    background-color: Black;
 }
