@@ -6,7 +6,7 @@ function show( $selection ) {
 function hide( $selection ) {
     $selection.removeClass( 'active' );
 }
-function checkMatches( boxNo, $box, soundUrl ) {
+function checkMatches( boxNo, $box, soundUrl, finishHandler ) {
     var $oldBox;
     if ( clicked === null ) {
         // Show this card
@@ -28,6 +28,7 @@ function checkMatches( boxNo, $box, soundUrl ) {
             if ( $( '.box' ).not( '.revealed' ).length === 0 ) {
                 $( '.main' ).addClass( 'complete' );
                 $( 'body' ).append( $( '<audio>' ).attr( 'autoplay', true ).append( $( '<source>' ).attr( { type: 'audio/wav', src: soundUrl } ) ) );
+                setTimeout( finishHandler, 14000 );
             }
         } else {
             setTimeout( function () {
@@ -38,15 +39,15 @@ function checkMatches( boxNo, $box, soundUrl ) {
         clicked = null;
     }
 }
-function createBoxes( images, soundUrl, levelClass ) {
-    images2 = images.concat( images );
+function createBoxes( images, soundUrl, levelClass, finishHandler ) {
     var images2, paras, i;
+    images2 = images.concat( images );
     paras = '';
     imageUrlForBox = [];
     for( i = 0; i < images2.length; i++ ) {
         paras = paras + '<span class=\'box\'></span>';
     }
-    $( '.main' ).html( paras ).addClass( levelClass );
+    $( '.main' ).removeClass().addClass( 'main' ).html( paras ).addClass( levelClass );
     $( '.box' ).each( function ( i ) {
         var imageNum;
         imageNum = parseInt( Math.random() * images2.length );
@@ -59,46 +60,46 @@ function createBoxes( images, soundUrl, levelClass ) {
         var boxNo, $box;
         $box = $( this );
         boxNo = $box.data( 'boxNo' );
-        checkMatches( boxNo, $box, soundUrl );
+        checkMatches( boxNo, $box, soundUrl, finishHandler );
     } );
 }
 function showDoctors() {
     createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ].map( function ( n ) {
         return 'images/doctors/' + n + '.jpg';
-    } ), 'http://www.maddmansrealm.com/drwho/tardis/sounds/sounds/Takeoff1.wav', 'doctors' );
+    } ), 'http://www.maddmansrealm.com/drwho/tardis/sounds/sounds/Takeoff1.wav', 'doctors', showMasters );
 }
 function showMasters() {
     createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ].map( function ( n ) {
         return 'images/masters/' + n + '.jpg';
-    } ), 'http://www.maddmansrealm.com/drwho/tardis/sounds/sounds/Eviltard.wav', 'masters' );
+    } ), 'http://www.maddmansrealm.com/drwho/tardis/sounds/sounds/Eviltard.wav', 'masters', showDaleks );
 }
 function showDaleks() {
     createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ].map( function ( n ) {
         return 'images/daleks/' + n + '.jpg';
-    } ), 'http://www.drwho.org/downloads/wav/baddies/dalek-exterminate.wav', 'daleks' );
+    } ), 'http://www.drwho.org/downloads/wav/baddies/dalek-exterminate.wav', 'daleks', showCompanions1 );
 }
 function showCompanions1() {
     createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ].map( function ( n ) {
         return 'images/companions/companions1-2/' + n + '.jpg';
-    } ), 'http://www.drwho.org/downloads/wav/Generic%20Dr.%20Who/assistnt.wav', 'companions' );
+    } ), 'http://www.drwho.org/downloads/wav/Generic%20Dr.%20Who/assistnt.wav', 'companions', showCompanions2 );
 }
 function showCompanions2() {
     createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ].map( function ( n ) {
         return 'images/companions/companions3-4/' + n + '.jpg';
-    } ), 'http://www.drwho.org/downloads/wav/Generic%20Dr.%20Who/assistnt.wav', 'companions' );
+    } ), 'http://www.drwho.org/downloads/wav/Generic%20Dr.%20Who/assistnt.wav', 'companions', showCompanions3 );
 }
 function showCompanions3() {
     createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ].map( function ( n ) {
         return 'images/companions/companions5-8/' + n + '.jpg';
-    } ), 'http://www.drwho.org/downloads/wav/Generic%20Dr.%20Who/assistnt.wav', 'companions' );
+    } ), 'http://www.drwho.org/downloads/wav/Generic%20Dr.%20Who/assistnt.wav', 'companions', showCompnaions4 );
 }
 function showCompanions4() {
     createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ].map( function ( n ) {
         return 'images/companions/companions9-10/' + n + '.jpg';
-    } ), 'http://www.drwho.org/downloads/wav/Generic%20Dr.%20Who/assistnt.wav', 'companions' );
+    } ), 'http://www.drwho.org/downloads/wav/Generic%20Dr.%20Who/assistnt.wav', 'companions', showCompanions5 );
 }
 function showCompanions5() {
     createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ].map( function ( n ) {
         return 'images/companions/companions11-12/' + n + '.jpg';
-    } ), 'http://www.drwho.org/downloads/wav/Generic%20Dr.%20Who/assistnt.wav', 'companions' );
+    } ), 'http://www.drwho.org/downloads/wav/Generic%20Dr.%20Who/assistnt.wav', 'companions', null );
 }
