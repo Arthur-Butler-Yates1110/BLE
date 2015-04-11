@@ -1,15 +1,27 @@
 body {
     background-image: url("images/backgrounds/TV.jpg");
 }
-h1 {
-    text-align: center;
+.main {
+    position: absolute;
+    top: 300px;
+}
+.align {
+    position: absolute;
+    top: 20px;
+    margin-left: 750px;
+}
+.Howtoplay {
+    position: absolute;
+    top: 100px;
+    margin-left: 625px;
     font-size: 400%;
-    color: #2b4f81;
+    color: #969aab;
 }
 .instructions {
-    text-align: center;
+    position: absolute;
+    top: 200px;
     font-size: 300%;
-    color: #8b475d;
+    color: #969aab;
 }
 .main.daleks {
     text-align: center;
@@ -151,4 +163,5 @@ input {
     font-size: 300%;
     color: #2B4F81;
     background-color: Black;
+    text-align: center;
 }
