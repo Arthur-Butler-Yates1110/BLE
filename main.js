@@ -81,12 +81,12 @@ function showDaleks() {
 function showCompanions1() {
     createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ].map( function ( n ) {
         return 'images/companions/companions1-2/' + n + '.jpg';
-    } ), 'http://www.drwho.org/downloads/wav/Generic%20Dr.%20Who/assistnt.wav', 'companions1', showCompanions2, 3000 );
+    } ), 'http://www.drwho.org/downloads/wav/wh/policbox.wav', 'companions1', showCompanions2, 6000 );
 }
 function showCompanions2() {
     createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ].map( function ( n ) {
         return 'images/companions/companions3-4/' + n + '.jpg';
-    } ), 'http://www.drwho.org/downloads/wav/Generic%20Dr.%20Who/assistnt.wav', 'companions2', showCompanions3, 3000 );
+    } ), 'http://www.drwho.org/downloads/wav/jp/jp-neverlisten.wav', 'companions2', showCompanions3, 1000 );
 }
 function showCompanions3() {
     createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ].map( function ( n ) {
@@ -96,13 +96,15 @@ function showCompanions3() {
 function showCompanions4() {
     createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ].map( function ( n ) {
         return 'images/companions/companions9-10/' + n + '.jpg';
-    } ), 'http://www.drwho.org/downloads/wav/Generic%20Dr.%20Who/assistnt.wav', 'companions4', showCompanions5, 3000 );
+    } ), 'http://www.drwho.org/downloads/wav/Generic%20Dr.%20Who/liz.wav', 'companions4', showCompanions5, 4000 );
 }
 function showCompanions5() {
     createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ].map( function ( n ) {
         return 'images/companions/companions11-12/' + n + '.jpg';
-    } ), 'http://www.drwho.org/downloads/wav/Generic%20Dr.%20Who/assistnt.wav', 'companions5', showMasters, 3000 );
+    } ), 'http://www.drwho.org/downloads/wav/Generic%20Dr.%20Who/brigader.wav', 'companions5', showMasters, 2000 );
 }
 function finishMessage() {
     alert( 'Congratulations, you have completed the game. Well done!');
+    $( 'body' ).addClass( 'finished' );
+    $( 'body' ).append( $( '<audio>' ).attr( 'autoplay', true ).append( $( '<source>' ).attr( { type: 'audio/wav', src: 'http://www.drwho.org/downloads/wav/Generic%20Dr.%20Who/2ndtheme.wav' } ) ) );
 }

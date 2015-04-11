@@ -1,5 +1,5 @@
 body {
-    background-image: url("images/backgrounds/TV.jpg");
+    background-image: url('images/backgrounds/TV.jpg');
 }
 .main {
     position: absolute;
@@ -39,13 +39,13 @@ body {
     text-align: center;
     background-image: url("images/backgrounds/1te.jpg");
     transform: none;
-    transition: transform 3s;
+    transition: transform 6s;
 }
 .main.companions2 {
     text-align: center;
     background-image: url("images/backgrounds/3te.jpg");
     transform: none;
-    transition: transform 3s;
+    transition: transform 1s;
 }
 .main.companions3 {
     text-align: center;
@@ -57,13 +57,13 @@ body {
     text-align: center;
     background-image: url("images/backgrounds/9te.jpg");
     transform: none;
-    transition: transform 3s;
+    transition: transform 4s;
 }
 .main.companions5 {
     text-align: center;
     background-image: url("images/backgrounds/11te.jpg");
     transform: none;
-    transition: transform 3s;
+    transition: transform 2s;
 }
 .companions1 .box {
     width: 200px;
@@ -240,4 +240,17 @@ input {
     color: #2B4F81;
     background-color: Black;
     text-align: center;
+}
+@keyframes myspinanimation {
+    0% { transform: none; opacity: 1; }
+    100% { transform: rotate(360deg); opacity: 0; }
+}
+@-webkit-keyframes myspinanimation {
+    0% { transform: none; opacity: 1; }
+    100% { transform: rotate(360deg); opacity: 0; }
+}
+body.finished {
+    animation: myspinanimation 17s linear;
+    -webkit-animation: myspinanimation 17s linear;
+    opacity: 0;
 }
