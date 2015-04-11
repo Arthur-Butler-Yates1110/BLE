@@ -35,13 +35,77 @@ body {
     text-align: center;
     background-image: url("images/backgrounds/mti.jpg");
 }
-.main.companions {
+.main.companions1 {
     text-align: center;
-    background-image: url("images/backgrounds/e.jpg");
+    background-image: url("images/backgrounds/1te.jpg");
     transform: none;
     transition: transform 3s;
 }
-.companions .box {
+.main.companions2 {
+    text-align: center;
+    background-image: url("images/backgrounds/3te.jpg");
+    transform: none;
+    transition: transform 3s;
+}
+.main.companions3 {
+    text-align: center;
+    background-image: url("images/backgrounds/5te.jpg");
+    transform: none;
+    transition: transform 3s;
+}
+.main.companions4 {
+    text-align: center;
+    background-image: url("images/backgrounds/9te.jpg");
+    transform: none;
+    transition: transform 3s;
+}
+.main.companions5 {
+    text-align: center;
+    background-image: url("images/backgrounds/11te.jpg");
+    transform: none;
+    transition: transform 3s;
+}
+.companions1 .box {
+    width: 200px;
+    height: 200px;  
+    border-radius: 20px; 
+    border: solid blue 5px;
+    display: inline-block;
+    margin: 10px;
+    padding: 5px;
+    box-shadow: 10px 10px 5px green;
+}
+.companions2 .box {
+    width: 200px;
+    height: 200px;  
+    border-radius: 20px; 
+    border: solid blue 5px;
+    display: inline-block;
+    margin: 10px;
+    padding: 5px;
+    box-shadow: 10px 10px 5px green;
+}
+.companions3 .box {
+    width: 200px;
+    height: 200px;  
+    border-radius: 20px; 
+    border: solid blue 5px;
+    display: inline-block;
+    margin: 10px;
+    padding: 5px;
+    box-shadow: 10px 10px 5px green;
+}
+.companions4 .box {
+    width: 200px;
+    height: 200px;  
+    border-radius: 20px; 
+    border: solid blue 5px;
+    display: inline-block;
+    margin: 10px;
+    padding: 5px;
+    box-shadow: 10px 10px 5px green;
+}
+.companions5 .box {
     width: 200px;
     height: 200px;  
     border-radius: 20px; 
@@ -129,7 +193,19 @@ body {
     -webkit-animation: mydematerialiseanimation 14s;
     opacity: 0;
 }
-.main.companions.complete {
+.main.companions1.complete {
+    transform: scale(1,0);
+}
+.main.companions2.complete {
+    transform: scale(0,1);
+}
+.main.companions3.complete {
+    transform: scale(1,0);
+}
+.main.companions4.complete {
+    transform: scale(0,1);
+}
+.main.companions5.complete {
     transform: scale(0,0);
 }
 @keyframes myshiveranimation {
