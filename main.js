@@ -66,7 +66,7 @@ function createBoxes( images, soundUrl, levelClass, finishHandler, timeBetweenLe
 function showDoctors() {
     createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ].map( function ( n ) {
         return 'images/doctors/' + n + '.jpg';
-    } ), 'http://www.maddmansrealm.com/drwho/tardis/sounds/sounds/Takeoff1.wav', 'doctors', finishMessage, 8000 );
+    } ), 'sounds/Takeoff1.wav', 'doctors', finishMessage, 8000 );
 }
 function showMasters() {
     createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ].map( function ( n ) {
