@@ -243,11 +243,11 @@ input {
 }
 @keyframes myspinanimation {
     0% { transform: none; opacity: 1; }
-    100% { transform: rotate(1440deg) scale(0,0); opacity: 0; }
+    100% { transform: rotate(2880deg) scale(0,0); opacity: 0; }
 }
 @-webkit-keyframes myspinanimation {
     0% { transform: none; opacity: 1; }
-    100% { transform: rotate(1440deg) scale(0,0); opacity: 0; }
+    100% { transform: rotate(2880deg) scale(0,0); opacity: 0; }
 }
 body.finished {
     animation: myspinanimation 17s linear;
