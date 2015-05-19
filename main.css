@@ -3,25 +3,12 @@ body {
 }
 .main {
     position: absolute;
-    top: 300px;
+    top: 262px;
 }
 .align {
     position: absolute;
     top: 20px;
-    margin-left: 750px;
-}
-.Howtoplay {
-    position: absolute;
-    top: 100px;
-    margin-left: 625px;
-    font-size: 400%;
-    color: #969aab;
-}
-.instructions {
-    position: absolute;
-    top: 200px;
-    font-size: 280%;
-    color: #969aab;
+    margin-left: 865px;
 }
 .main.daleks {
     text-align: center;
@@ -144,7 +131,8 @@ body {
     margin: 10px;
     padding: 5px;
     box-shadow: 10px 10px 5px red;
-}.box img {
+}
+.box img {
     transform: none;
     opacity: 0;
     transition: transform 0.4s, opacity 0.4s;
@@ -238,8 +226,9 @@ body {
 input { 
     font-size: 300%;
     color: #2B4F81;
-    background-color: Black;
-    text-align: center;
+    background-image: url('images/Tardis.jpg');
+    width: 127px;
+    height: 219px;
 }
 @keyframes myspinanimation {
     0% { transform: none; opacity: 1; }

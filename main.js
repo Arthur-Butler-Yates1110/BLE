@@ -1,5 +1,6 @@
 var clicked, imageUrlForBox;
 clicked = null;
+alert( 'How to Play, Click on a box, then click on another, if they do not match then try again, if they do then try for more pairs.' );
 function show( $selection ) {
     $selection.addClass( 'active' );
 }
@@ -71,40 +72,40 @@ function showDoctors() {
 function showMasters() {
     createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ].map( function ( n ) {
         return 'images/masters/' + n + '.jpg';
-    } ), 'http://www.maddmansrealm.com/drwho/tardis/sounds/sounds/Eviltard.wav', 'masters', showDaleks, 14000 );
+    } ), 'sounds/Eviltard.wav', 'masters', showDaleks, 14000 );
 }
 function showDaleks() {
     createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ].map( function ( n ) {
         return 'images/daleks/' + n + '.jpg';
-    } ), 'http://www.drwho.org/downloads/wav/baddies/dalek-exterminate.wav', 'daleks', showDoctors, 1500 );
+    } ), 'sounds/dalek-exterminate.wav', 'daleks', showDoctors, 1500 );
 }
 function showCompanions1() {
     createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ].map( function ( n ) {
         return 'images/companions/companions1-2/' + n + '.jpg';
-    } ), 'http://www.drwho.org/downloads/wav/wh/policbox.wav', 'companions1', showCompanions2, 6000 );
+    } ), 'sounds/policbox.wav', 'companions1', showCompanions2, 6000 );
 }
 function showCompanions2() {
     createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ].map( function ( n ) {
         return 'images/companions/companions3-4/' + n + '.jpg';
-    } ), 'http://www.drwho.org/downloads/wav/jp/jp-neverlisten.wav', 'companions2', showCompanions3, 1000 );
+    } ), 'sounds/jp-neverlisten.wav', 'companions2', showCompanions3, 1000 );
 }
 function showCompanions3() {
     createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ].map( function ( n ) {
         return 'images/companions/companions5-8/' + n + '.jpg';
-    } ), 'http://www.drwho.org/downloads/wav/Generic%20Dr.%20Who/assistnt.wav', 'companions3', showCompanions4, 3000 );
+    } ), 'sounds/assistnt.wav', 'companions3', showCompanions4, 3000 );
 }
 function showCompanions4() {
     createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ].map( function ( n ) {
         return 'images/companions/companions9-10/' + n + '.jpg';
-    } ), 'http://www.drwho.org/downloads/wav/Generic%20Dr.%20Who/liz.wav', 'companions4', showCompanions5, 4000 );
+    } ), 'sounds/liz.wav', 'companions4', showCompanions5, 4000 );
 }
 function showCompanions5() {
     createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ].map( function ( n ) {
         return 'images/companions/companions11-12/' + n + '.jpg';
-    } ), 'http://www.drwho.org/downloads/wav/Generic%20Dr.%20Who/brigader.wav', 'companions5', showMasters, 2000 );
+    } ), 'sounds/brigader.wav', 'companions5', showMasters, 2000 );
 }
 function finishMessage() {
     alert( 'Congratulations, you have completed the game. Well done!');
     $( 'body' ).addClass( 'finished' );
-    $( 'body' ).append( $( '<audio>' ).attr( 'autoplay', true ).append( $( '<source>' ).attr( { type: 'audio/wav', src: 'http://www.drwho.org/downloads/wav/Generic%20Dr.%20Who/2ndtheme.wav' } ) ) );
+    $( 'body' ).append( $( '<audio>' ).attr( 'autoplay', true ).append( $( '<source>' ).attr( { type: 'audio/wav', src: 'sounds/2ndtheme.wav' } ) ) );
 }
