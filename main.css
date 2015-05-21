@@ -24,31 +24,31 @@ body {
 }
 .main.companions1 {
     text-align: center;
-    background-image: url("images/backgrounds/1te.jpg");
+    background-image: url("images/backgrounds/TL.jpg");
     transform: none;
     transition: transform 6s;
 }
 .main.companions2 {
     text-align: center;
-    background-image: url("images/backgrounds/3te.jpg");
+    background-image: url("images/backgrounds/UN.jpg");
     transform: none;
     transition: transform 1s;
 }
 .main.companions3 {
     text-align: center;
-    background-image: url("images/backgrounds/5te.jpg");
+    background-image: url("images/backgrounds/HA.jpg");
     transform: none;
     transition: transform 3s;
 }
 .main.companions4 {
     text-align: center;
-    background-image: url("images/backgrounds/9te.jpg");
+    background-image: url("images/backgrounds/PE.jpg");
     transform: none;
     transition: transform 4s;
 }
 .main.companions5 {
     text-align: center;
-    background-image: url("images/backgrounds/11te.jpg");
+    background-image: url("images/backgrounds/AH.jpg");
     transform: none;
     transition: transform 2s;
 }
