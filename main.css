@@ -10,47 +10,69 @@ body {
     top: 20px;
     margin-left: 865px;
 }
+@keyframes mymaterialiseanimation {
+    0% { opacity: 0; }
+    20% { opacity: 0.5; }
+    40% { opacity: 0.25; }
+    60% { opacity: 0.75; }
+    80% { opacity: 0.5 }
+    100% { opacity: 1; }
+}
+@-webkit-keyframes mymaterialiseanimation {
+     0% { opacity: 0; }
+    20% { opacity: 0.5; }
+    40% { opacity: 0.25; }
+    60% { opacity: 0.75; }
+    80% { opacity: 0.5 }
+    100% { opacity: 1; }
+}
 .main.daleks {
+    animation: mymaterialiseanimation 9s;
+    -webkit-animation: mymaterialiseanimation 9s;
     text-align: center;
-    background-image: url("images/backgrounds/ds.jpg");
+    background-image: url("images/backgrounds/DA.jpg");
 }
 .main.doctors {
+    animation: mymaterialiseanimation 9s;
+    -webkit-animation: mymaterialiseanimation 9s;
     text-align: center;
-    background-image: url("images/backgrounds/ti.png");
+    background-image: url("images/backgrounds/e.jpg");
 }
 .main.masters {
+    animation: mymaterialiseanimation 9s;
+    -webkit-animation: mymaterialiseanimation 9s;
     text-align: center;
-    background-image: url("images/backgrounds/mti.jpg");
+    background-image: url("images/backgrounds/IG.jpg");
 }
 .main.companions1 {
+    animation: mymaterialiseanimation 9s;
+    -webkit-animation: mymaterialiseanimation 9s;
     text-align: center;
-    background-image: url("images/backgrounds/TL.jpg");
-    transform: none;
-    transition: transform 6s;
+    background-image: url("images/backgrounds/TL.jpg"); 
 }
 .main.companions2 {
+    animation: mymaterialiseanimation 9s;
+    -webkit-animation: mymaterialiseanimation 9s;
     text-align: center;
     background-image: url("images/backgrounds/UN.jpg");
-    transform: none;
-    transition: transform 1s;
 }
 .main.companions3 {
+    animation: mymaterialiseanimation 9s;
+    -webkit-animation: mymaterialiseanimation 9s;
     text-align: center;
     background-image: url("images/backgrounds/HA.jpg");
-    transform: none;
-    transition: transform 3s;
 }
 .main.companions4 {
+    animation: mymaterialiseanimation 9s;
+    -webkit-animation: mymaterialiseanimation 9s;
     text-align: center;
-    background-image: url("images/backgrounds/PE.jpg");
-    transform: none;
-    transition: transform 4s;
-}
+    background-image: url("images/backgrounds/PE.jpg");}
+
 .main.companions5 {
+    animation: mymaterialiseanimation 9s;
+    -webkit-animation: mymaterialiseanimation 9s;
     text-align: center;
     background-image: url("images/backgrounds/AH.jpg");
-    transform: none;
-    transition: transform 2s;
 }
 .companions1 .box {
     width: 200px;
@@ -143,32 +165,18 @@ body {
 }
 @keyframes mydematerialiseanimation {
     0% { opacity: 1; }
-    8.3% { opacity: 0.5; }
-    16.6% { opacity: 1; }
-    24.9% { opacity: 0.4; }
-    33.3% { opacity: 0.8; }
-    41.6% { opacity: 0.3; }
-    49.9% { opacity: 0.6; }
-    58.2% { opacity: 0.2; }
-    66.6% { opacity: 0.4; }
-    74.9% { opacity: 0.1; }
-    83.3% { opacity: 0.2; }
-    91.6% { opacity: 0.1; }
+    20% { opacity: 0.5; }
+    40% { opacity: 0.75; }
+    60% { opacity: 0.25; }
+    80% { opacity: 0.5 }
     100% { opacity: 0; }
 }
 @-webkit-keyframes mydematerialiseanimation {
     0% { opacity: 1; }
-    8.3% { opacity: 0.5; }
-    16.6% { opacity: 1; }
-    24.9% { opacity: 0.4; }
-    33.3% { opacity: 0.8; }
-    41.6% { opacity: 0.3; }
-    49.9% { opacity: 0.6; }
-    58.2% { opacity: 0.2; }
-    66.6% { opacity: 0.4; }
-    74.9% { opacity: 0.1; }
-    83.3% { opacity: 0.2; }
-    91.6% { opacity: 0.1; }
+    20% { opacity: 0.5; }
+    40% { opacity: 0.75; }
+    60% { opacity: 0.25; }
+    80% { opacity: 0.5 }
     100% { opacity: 0; }
 }
 .main.doctors.complete {
@@ -177,50 +185,38 @@ body {
     opacity: 0;
 }
 .main.masters.complete {
-    animation: mydematerialiseanimation 14s;
-    -webkit-animation: mydematerialiseanimation 14s;
+    animation: mydematerialiseanimation 8s;
+    -webkit-animation: mydematerialiseanimation 8s;
     opacity: 0;
 }
 .main.companions1.complete {
-    transform: scale(1,0);
+    animation: mydematerialiseanimation 8s;
+    -webkit-animation: mydematerialiseanimation 8s;
+    opacity: 0;
 }
 .main.companions2.complete {
-    transform: scale(0,1);
+    animation: mydematerialiseanimation 8s;
+    -webkit-animation: mydematerialiseanimation 8s;
+    opacity: 0;
 }
 .main.companions3.complete {
-    transform: scale(1,0);
+    animation: mydematerialiseanimation 8s;
+    -webkit-animation: mydematerialiseanimation 8s;
+    opacity: 0;
 }
 .main.companions4.complete {
-    transform: scale(0,1);
+    animation: mydematerialiseanimation 8s;
+    -webkit-animation: mydematerialiseanimation 8s;
+    opacity: 0;
 }
 .main.companions5.complete {
-    transform: scale(0,0);
-}
-@keyframes myshiveranimation {
-    0% { transform: none; opacity: 1; }
-    25% { transform: none; opacity: 1; }
-    50% { transform: none; opacity: 1; }
-    75% { transform: none; opacity: 1; }
-    80% { transform: none; opacity: 1; }
-    85% { transform: translate(20px,0px); opacity: 0.75; }
-    90% { transform: none; opacity: 0.5; }
-    95% { transform: translate(-20px,0px); opacity: 0.25; }
-    100% { transform: none; opacity: 0; }
-}
-@-webkit-keyframes myshiveranimation {
-    0% { transform: none; opacity: 1; }
-    25% { transform: none; opacity: 1; }
-    50% { transform: none; opacity: 1; }
-    75% { transform: none; opacity: 1; }
-    80% { transform: none; opacity: 1; }
-    85% { transform: translate(20px,0px); opacity: 0.75; }
-    90% { transform: none; opacity: 0.5; }
-    95% { transform: translate(-20px,0px); opacity: 0.25; }
-    100% { transform: none; opacity: 0; }
+    animation: mydematerialiseanimation 8s;
+    -webkit-animation: mydematerialiseanimation 8s;
+    opacity: 0;
 }
 .main.daleks.complete {
-    animation: myshiveranimation 1.5s;
-    -webkit-animation: myshiveranimation 1.5s;
+    animation: mydematerialiseanimation 8s;
+    -webkit-animation: mydematerialiseanimation 8s;
     opacity: 0;
 }
 input { 
@@ -231,15 +227,16 @@ input {
     height: 219px;
 }
 @keyframes myspinanimation {
-    0% { transform: none; opacity: 1; }
-    100% { transform: rotate(2880deg) scale(0,0); opacity: 0; }
+    0% { transform: none; opacity: 1; background-image: url('images/backgrounds/TV.jpg'); }
+    100% { transform: rotate(2880deg) scale(0,0); opacity: 0; background-image: url('images/backgrounds/GA.jpg'); }
 }
 @-webkit-keyframes myspinanimation {
-    0% { transform: none; opacity: 1; }
-    100% { transform: rotate(2880deg) scale(0,0); opacity: 0; }
+    0% { transform: none; opacity: 1; background-image: url('images/backgrounds/TV.jpg'); }
+    100% { transform: rotate(2880deg) scale(0,0); opacity: 0; background-image: url('images/backgrounds/GA.jpg'); }
 }
 body.finished {
     animation: myspinanimation 17s linear;
     -webkit-animation: myspinanimation 17s linear;
     opacity: 0;
+    background-image: url('images/backgrounds/GA.jpg');
 }

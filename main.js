@@ -1,6 +1,6 @@
 var clicked, imageUrlForBox;
 clicked = null;
-alert( 'How to Play, Click on a box, then click on another, if they do not match then try again, if they do then try for more pairs.' );
+alert( 'Travel through time and space on your search for Gallifrey, click on the boxes the to create pairs, once all the pairs in the level are done the TARDIS will take you to the next level.' );
 function show( $selection ) {
     $selection.addClass( 'active' );
 }
@@ -40,7 +40,7 @@ function checkMatches( boxNo, $box, soundUrl, finishHandler, timeBetweenLevel ) 
         clicked = null;
     }
 }
-function createBoxes( images, soundUrl, levelClass, finishHandler, timeBetweenLevel ) {
+function createBoxes( images, soundUrl, levelClass, finishHandler, timeBetweenLevel, startSoundUrl ) {
     var images2, paras, i;
     images2 = images.concat( images );
     paras = '';
@@ -48,6 +48,7 @@ function createBoxes( images, soundUrl, levelClass, finishHandler, timeBetweenLe
     for( i = 0; i < images2.length; i++ ) {
         paras = paras + '<span class=\'box\'></span>';
     }
+    $( 'body' ).append( $( '<audio>' ).attr( 'autoplay', true ).append( $( '<source>' ).attr( { type: 'audio/wav', src: startSoundUrl } ) ) );
     $( '.main' ).removeClass().addClass( 'main' ).html( paras ).addClass( levelClass );
     $( '.box' ).each( function ( i ) {
         var imageNum;
@@ -67,45 +68,44 @@ function createBoxes( images, soundUrl, levelClass, finishHandler, timeBetweenLe
 function showDoctors() {
     createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ].map( function ( n ) {
         return 'images/doctors/' + n + '.jpg';
-    } ), 'sounds/Takeoff1.wav', 'doctors', finishMessage, 8000 );
+    } ), 'sounds/Takeoff1.wav', 'doctors', finishMessage, 8000, 'sounds/tardLand.wav' );
 }
 function showMasters() {
     createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ].map( function ( n ) {
         return 'images/masters/' + n + '.jpg';
-    } ), 'sounds/Eviltard.wav', 'masters', showDaleks, 14000 );
+    } ), 'sounds/Takeoff1.wav', 'masters', showDaleks, 8000, 'sounds/tardLand.wav' );
 }
 function showDaleks() {
     createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ].map( function ( n ) {
         return 'images/daleks/' + n + '.jpg';
-    } ), 'sounds/dalek-exterminate.wav', 'daleks', showDoctors, 1500 );
+    } ), 'sounds/Takeoff1.wav', 'daleks', showDoctors, 8000, 'sounds/tardLand.wav' );
 }
 function showCompanions1() {
     createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ].map( function ( n ) {
         return 'images/companions/companions1-2/' + n + '.jpg';
-    } ), 'sounds/policbox.wav', 'companions1', showCompanions2, 6000 );
+    } ), 'sounds/Takeoff1.wav', 'companions1', showCompanions2, 8000, 'sounds/tardLand.wav' );
 }
 function showCompanions2() {
     createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ].map( function ( n ) {
         return 'images/companions/companions3-4/' + n + '.jpg';
-    } ), 'sounds/jp-neverlisten.wav', 'companions2', showCompanions3, 1000 );
+    } ), 'sounds/Takeoff1.wav', 'companions2', showCompanions3, 8000, 'sounds/tardLand.wav' );
 }
 function showCompanions3() {
     createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ].map( function ( n ) {
         return 'images/companions/companions5-8/' + n + '.jpg';
-    } ), 'sounds/assistnt.wav', 'companions3', showCompanions4, 3000 );
+    } ), 'sounds/Takeoff1.wav', 'companions3', showCompanions4, 8000, 'sounds/tardLand.wav' );
 }
 function showCompanions4() {
     createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ].map( function ( n ) {
         return 'images/companions/companions9-10/' + n + '.jpg';
-    } ), 'sounds/liz.wav', 'companions4', showCompanions5, 4000 );
+    } ), 'sounds/Takeoff1.wav', 'companions4', showCompanions5, 8000, 'sounds/tardLand.wav' );
 }
 function showCompanions5() {
     createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ].map( function ( n ) {
         return 'images/companions/companions11-12/' + n + '.jpg';
-    } ), 'sounds/brigader.wav', 'companions5', showMasters, 2000 );
+    } ), 'sounds/Takeoff1.wav', 'companions5', showMasters, 8000, 'sounds/tardLand.wav' );
 }
 function finishMessage() {
-    alert( 'Congratulations, you have completed the game. Well done!');
     $( 'body' ).addClass( 'finished' );
-    $( 'body' ).append( $( '<audio>' ).attr( 'autoplay', true ).append( $( '<source>' ).attr( { type: 'audio/wav', src: 'sounds/2ndtheme.wav' } ) ) );
+    $( 'body' ).append( $( '<audio>' ).attr( 'autoplay', true ).append( $( '<source>' ).attr( { type: 'audio/wav', src: 'sounds/2ndtheme.wav' } ) ) ); 
 }
