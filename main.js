@@ -1,6 +1,6 @@
 var clicked, imageUrlForBox;
 clicked = null;
-alert( 'Travel through time and space on your search for Gallifrey, click on the boxes the to create pairs, once all the pairs in the level are done the TARDIS will take you to the next level.' );
+alert( 'Travel through time and space on your search for Gallifrey, click on the boxes to create pairs, once all the pairs in the level are done the TARDIS will take you to the next level.' );
 function show( $selection ) {
     $selection.addClass( 'active' );
 }

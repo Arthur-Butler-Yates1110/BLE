@@ -1,5 +1,9 @@
 body {
     background-image: url('images/backgrounds/TV.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 .main {
     position: absolute;
@@ -36,7 +40,7 @@ body {
     animation: mymaterialiseanimation 9s;
     -webkit-animation: mymaterialiseanimation 9s;
     text-align: center;
-    background-image: url("images/backgrounds/e.jpg");
+    background-image: url("images/backgrounds/Gap.jpg");
 }
 .main.masters {
     animation: mymaterialiseanimation 9s;
@@ -48,7 +52,7 @@ body {
     animation: mymaterialiseanimation 9s;
     -webkit-animation: mymaterialiseanimation 9s;
     text-align: center;
-    background-image: url("images/backgrounds/TL.jpg"); 
+    background-image: url("images/backgrounds/TL.png");
 }
 .main.companions2 {
     animation: mymaterialiseanimation 9s;
@@ -66,8 +70,8 @@ body {
     animation: mymaterialiseanimation 9s;
     -webkit-animation: mymaterialiseanimation 9s;
     text-align: center;
-    background-image: url("images/backgrounds/PE.jpg");}
-
+    background-image: url("images/backgrounds/PE.jpg");
+}
 .main.companions5 {
     animation: mymaterialiseanimation 9s;
     -webkit-animation: mymaterialiseanimation 9s;
