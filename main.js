@@ -66,7 +66,7 @@ function createBoxes( images, soundUrl, levelClass, finishHandler, timeBetweenLe
     } );
 }
 function showDoctors() {
-    createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ].map( function ( n ) {
+    createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ].map( function ( n ) {
         return 'images/doctors/' + n + '.jpg';
     } ), 'sounds/Takeoff1.wav', 'doctors', finishMessage, 8000, 'sounds/tardLand.wav' );
 }
@@ -76,17 +76,17 @@ function showMasters() {
     } ), 'sounds/Takeoff1.wav', 'masters', showDaleks, 8000, 'sounds/tardLand.wav' );
 }
 function showDaleks() {
-    createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ].map( function ( n ) {
+    createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ].map( function ( n ) {
         return 'images/daleks/' + n + '.jpg';
-    } ), 'sounds/Takeoff1.wav', 'daleks', showDoctors, 8000, 'sounds/tardLand.wav' );
+    } ), 'sounds/Takeoff1.wav', 'daleks', showCybermen, 8000, 'sounds/tardLand.wav' );
 }
 function showCompanions1() {
-    createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ].map( function ( n ) {
+    createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ].map( function ( n ) {
         return 'images/companions/companions1-2/' + n + '.jpg';
     } ), 'sounds/Takeoff1.wav', 'companions1', showCompanions2, 8000, 'sounds/tardLand.wav' );
 }
 function showCompanions2() {
-    createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ].map( function ( n ) {
+    createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ].map( function ( n ) {
         return 'images/companions/companions3-4/' + n + '.jpg';
     } ), 'sounds/Takeoff1.wav', 'companions2', showCompanions3, 8000, 'sounds/tardLand.wav' );
 }
@@ -96,14 +96,19 @@ function showCompanions3() {
     } ), 'sounds/Takeoff1.wav', 'companions3', showCompanions4, 8000, 'sounds/tardLand.wav' );
 }
 function showCompanions4() {
-    createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ].map( function ( n ) {
+    createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ].map( function ( n ) {
         return 'images/companions/companions9-10/' + n + '.jpg';
     } ), 'sounds/Takeoff1.wav', 'companions4', showCompanions5, 8000, 'sounds/tardLand.wav' );
 }
 function showCompanions5() {
-    createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ].map( function ( n ) {
+    createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ].map( function ( n ) {
         return 'images/companions/companions11-12/' + n + '.jpg';
     } ), 'sounds/Takeoff1.wav', 'companions5', showMasters, 8000, 'sounds/tardLand.wav' );
+}
+function showCybermen() {
+    createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ].map( function ( n ) {
+	return 'images/cybermen/' + n + '.jpg';
+    } ), 'sounds/Takeoff1.wav', 'cybermen', showDoctors, 8000, 'sounds/tardLand.wav' );
 }
 function finishMessage() {
     $( 'body' ).addClass( 'finished' );

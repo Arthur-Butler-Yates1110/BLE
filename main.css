@@ -36,6 +36,12 @@ body {
     text-align: center;
     background-image: url("images/backgrounds/DA.jpg");
 }
+.main.cybermen {
+     animation: mymaterialiseanimation 9s;
+    -webkit-animation: mymaterialiseanimation 9s;
+    text-align: center;
+    background-image: url("images/backgrounds/totcm.jpg");
+}
 .main.doctors {
     animation: mymaterialiseanimation 9s;
     -webkit-animation: mymaterialiseanimation 9s;
@@ -158,6 +164,16 @@ body {
     padding: 5px;
     box-shadow: 10px 10px 5px red;
 }
+.cybermen .box {
+    width: 200px;
+    height: 200px;  
+    border-radius: 20px; 
+    border: solid #cccccc 5px;
+    display: inline-block;
+    margin: 10px;
+    padding: 5px;
+    box-shadow: 10px 10px 5px #bcc6cc;
+}
 .box img {
     transform: none;
     opacity: 0;
@@ -219,6 +235,11 @@ body {
     opacity: 0;
 }
 .main.daleks.complete {
+    animation: mydematerialiseanimation 8s;
+    -webkit-animation: mydematerialiseanimation 8s;
+    opacity: 0;
+}
+.main.cybermen.complete {
     animation: mydematerialiseanimation 8s;
     -webkit-animation: mydematerialiseanimation 8s;
     opacity: 0;
