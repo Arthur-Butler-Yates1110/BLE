@@ -108,7 +108,12 @@ function showCompanions5() {
 function showCybermen() {
     createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ].map( function ( n ) {
 	return 'images/cybermen/' + n + '.jpg';
-    } ), 'sounds/Takeoff1.wav', 'cybermen', showDoctors, 8000, 'sounds/tardLand.wav' );
+    } ), 'sounds/Takeoff1.wav', 'cybermen', showTimeLords, 8000, 'sounds/tardLand.wav' );
+}
+function showTimeLords() {
+    createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ].map( function ( n ) {
+	return 'images/time lords/' + n + '.jpg';
+    } ), 'sounds/Takeoff1.wav', 'timeLords', showDoctors, 8000, 'sounds/tardLand.wav' );
 }
 function finishMessage() {
     $( 'body' ).addClass( 'finished' );

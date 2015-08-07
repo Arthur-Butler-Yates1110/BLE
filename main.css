@@ -36,6 +36,12 @@ body {
     text-align: center;
     background-image: url("images/backgrounds/DA.jpg");
 }
+.main.timeLords {
+    animation: mymaterialiseanimation 9s;
+    -webkit-animation: mymaterialiseanimation 9s;
+    text-align: center;
+    background-image: url("images/backgrounds/hc.jpg");
+}
 .main.cybermen {
      animation: mymaterialiseanimation 9s;
     -webkit-animation: mymaterialiseanimation 9s;
@@ -133,6 +139,16 @@ body {
     margin: 10px;
     padding: 5px;
     box-shadow: 10px 10px 5px green;
+}
+.timeLords .box {
+    width: 200px;
+    height: 200px;  
+    border-radius: 20px; 
+    border: solid #8c001a 5px;
+    display: inline-block;
+    margin: 10px;
+    padding: 5px;
+    box-shadow: 10px 10px 5px #151b54;
 }
 .daleks .box {
     width: 200px;
@@ -240,6 +256,11 @@ body {
     opacity: 0;
 }
 .main.cybermen.complete {
+    animation: mydematerialiseanimation 8s;
+    -webkit-animation: mydematerialiseanimation 8s;
+    opacity: 0;
+}
+.main.timeLords.complete {
     animation: mydematerialiseanimation 8s;
     -webkit-animation: mydematerialiseanimation 8s;
     opacity: 0;
