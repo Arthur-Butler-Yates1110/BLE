@@ -24,8 +24,8 @@ function checkMatches( boxNo, $box, soundUrl, finishHandler, timeBetweenLevel ) 
         if ( imageUrlForBox[ clicked ] === imageUrlForBox[ boxNo ] ) {
             $oldBox.addClass( 'revealed' );
             $box.addClass( 'revealed' );
-            $( '.box' ).addClass( 'revealed' ); // Testing please remove later
-            show( $( '.box' ) ); // Testing please remove later
+            //$( '.box' ).addClass( 'revealed' ); // Testing please remove later
+            //show( $( '.box' ) ); // Testing please remove later
             if ( $( '.box' ).not( '.revealed' ).length === 0 ) {
                 $( '.main' ).addClass( 'complete' );
                 $( 'body' ).append( $( '<audio>' ).attr( 'autoplay', true ).append( $( '<source>' ).attr( { type: 'audio/wav', src: soundUrl } ) ) );
@@ -91,19 +91,25 @@ function showCompanions2() {
     } ), 'sounds/Takeoff1.wav', 'companions2', showCompanions3, 8000, 'sounds/tardLand.wav' );
 }
 function showCompanions3() {
-    createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ].map( function ( n ) {
-        return 'images/companions/companions5-8/' + n + '.jpg';
+    createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ].map( function ( n ) {
+        return 'images/companions/companions5-7/' + n + '.jpg';
     } ), 'sounds/Takeoff1.wav', 'companions3', showCompanions4, 8000, 'sounds/tardLand.wav' );
 }
 function showCompanions4() {
     createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ].map( function ( n ) {
-        return 'images/companions/companions9-10/' + n + '.jpg';
+        return 'images/companions/companions8-war/' + n + '.jpg';
     } ), 'sounds/Takeoff1.wav', 'companions4', showCompanions5, 8000, 'sounds/tardLand.wav' );
 }
+
 function showCompanions5() {
     createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ].map( function ( n ) {
+        return 'images/companions/companions9-10/' + n + '.jpg';
+    } ), 'sounds/Takeoff1.wav', 'companions5', showCompanions6, 8000, 'sounds/tardLand.wav' );
+}
+function showCompanions6() {
+    createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ].map( function ( n ) {
         return 'images/companions/companions11-12/' + n + '.jpg';
-    } ), 'sounds/Takeoff1.wav', 'companions5', showMasters, 8000, 'sounds/tardLand.wav' );
+    } ), 'sounds/Takeoff1.wav', 'companions6', showMasters, 8000, 'sounds/tardLand.wav' );
 }
 function showCybermen() {
     createBoxes( [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ].map( function ( n ) {
@@ -117,5 +123,5 @@ function showTimeLords() {
 }
 function finishMessage() {
     $( 'body' ).addClass( 'finished' );
-    $( 'body' ).append( $( '<audio>' ).attr( 'autoplay', true ).append( $( '<source>' ).attr( { type: 'audio/wav', src: 'sounds/2ndtheme.wav' } ) ) ); 
-}
+    $( 'body' ).append( $( '<audio>' ).attr( 'autoplay', true ).append( $( '<source>' ).attr( { type: 'audio/wav', src: 'sounds/2ndtheme.wav' } ) ) );
+} 

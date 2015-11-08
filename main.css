@@ -82,9 +82,15 @@ body {
     animation: mymaterialiseanimation 9s;
     -webkit-animation: mymaterialiseanimation 9s;
     text-align: center;
-    background-image: url("images/backgrounds/PE.jpg");
+    background-image: url("images/backgrounds/DE.jpg");
 }
 .main.companions5 {
+    animation: mymaterialiseanimation 9s;
+    -webkit-animation: mymaterialiseanimation 9s;
+    text-align: center;
+    background-image: url("images/backgrounds/PE.jpg");
+}
+.main.companions6 {
     animation: mymaterialiseanimation 9s;
     -webkit-animation: mymaterialiseanimation 9s;
     text-align: center;
@@ -92,6 +98,7 @@ body {
 }
 .companions1 .box {
     width: 200px;
+
     height: 200px;  
     border-radius: 20px; 
     border: solid blue 5px;
@@ -131,6 +138,16 @@ body {
     box-shadow: 10px 10px 5px green;
 }
 .companions5 .box {
+    width: 200px;
+    height: 200px;  
+    border-radius: 20px; 
+    border: solid blue 5px;
+    display: inline-block;
+    margin: 10px;
+    padding: 5px;
+    box-shadow: 10px 10px 5px green;
+}
+.companions6 .box {
     width: 200px;
     height: 200px;  
     border-radius: 20px; 
@@ -191,12 +208,10 @@ body {
     box-shadow: 10px 10px 5px #bcc6cc;
 }
 .box img {
-    transform: none;
     opacity: 0;
-    transition: transform 0.4s, opacity 0.4s;
+    transition: opacity 1s;
 }
 .box.active img {
-    transform: rotate(360deg);
     opacity: 1;
 }
 @keyframes mydematerialiseanimation {
@@ -250,6 +265,11 @@ body {
     -webkit-animation: mydematerialiseanimation 8s;
     opacity: 0;
 }
+.main.companions6.complete {
+    animation: mydematerialiseanimation 8s;
+    -webkit-animation: mydematerialiseanimation 8s;
+    opacity: 0;
+}
 .main.daleks.complete {
     animation: mydematerialiseanimation 8s;
     -webkit-animation: mydematerialiseanimation 8s;
@@ -265,7 +285,7 @@ body {
     -webkit-animation: mydematerialiseanimation 8s;
     opacity: 0;
 }
-input { 
+.tardis { 
     font-size: 300%;
     color: #2B4F81;
     background-image: url('images/Tardis.jpg');
@@ -277,8 +297,8 @@ input {
     100% { transform: rotate(2880deg) scale(0,0); opacity: 0; background-image: url('images/backgrounds/GA.jpg'); }
 }
 @-webkit-keyframes myspinanimation {
-    0% { transform: none; opacity: 1; background-image: url('images/backgrounds/TV.jpg'); }
-    100% { transform: rotate(2880deg) scale(0,0); opacity: 0; background-image: url('images/backgrounds/GA.jpg'); }
+     0% { transform: none; opacity: 1; background-image: url('images/backgrounds/TV.jpg'); }
+   100% { transform: rotate(2880deg) scale(0,0); opacity: 0; background-image: url('images/backgrounds/GA.jpg'); }
 }
 body.finished {
     animation: myspinanimation 17s linear;
